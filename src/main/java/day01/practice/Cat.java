@@ -4,7 +4,7 @@ public class Cat {
     // Attributes
     private int age;
     private String color;
-    private String speaks;
+    private static String speaks;
 
 
     // Getters and setters
@@ -28,8 +28,8 @@ public class Cat {
     	return speaks;
     }
     
-    public void setSpeaks(String speaks) {
-    	this.speaks = speaks;
+    public static void setSpeaks(String speaks) {
+    	Cat.speaks = speaks;
     }
 
     // Main method to create Dog objects
@@ -38,11 +38,11 @@ public class Cat {
     	Cat cat1 = new Cat();
     	cat1.setColor("White");
     	cat1.setage(4);
-    	cat1.setSpeaks("Meow!");
+    	Cat.setSpeaks("Meow!");
         Cat cat2 = new Cat();
         cat2.setColor("Black");
         cat2.setage(3);
-        cat2.setSpeaks("Meow!");
+//        cat2.setSpeaks("Meow!");
 
         // Print the attributes of each Dog
         System.out.println("Cat 1:");
