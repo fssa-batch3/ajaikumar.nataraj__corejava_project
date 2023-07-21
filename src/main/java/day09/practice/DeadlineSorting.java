@@ -40,6 +40,7 @@ public class DeadlineSorting {
 		{
 			arr.add(new Task(3, "Coding", LocalDate.of(2022, 05, 21)));
 			arr.add(new Task(3, "Coding", LocalDate.of(2022, 04, 21)));
+			arr.add(new Task(3, "Coding", LocalDate.of(2022, 10, 22)));
 			arr.add(new Task(5, "Product Design", LocalDate.of(2022, 10, 01)));
 			arr.add(new Task(1, "Software Design", LocalDate.of(2022, 10, 07)));
 			arr.add(new Task(3, "Coding", LocalDate.of(2022, 10, 22)));
