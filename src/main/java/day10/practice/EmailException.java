@@ -3,18 +3,21 @@ package day10.practice;
 import java.util.regex.Pattern;
 
 public class EmailException {
-	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		String email = "surya.umapathy@freshworks.com";
-		String regex = "^.*@.*\\..*.$";
+		public static boolean isValidEmail(String emailId) throws InvalidEmailException {
+	        String regex = "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$";
+	        Pattern pattern = Pattern.compile(regex);
 
-		Boolean isMatch = Pattern.matches(regex, email);
+	        if (emailId == null){
+	            throw new IllegalArgumentException("Email Id is null");
+	        } else if (emailId.equals("")) {
+	            throw new IllegalArgumentException("Email Id is Empty");
+	        } else if (!pattern.matcher(emailId).matches()) {
+	            throw new InvalidEmailException("Invalid email");
+	        }
 
-		if (isMatch) {
-			System.out.println("The email address is: Valid");
-		} else {
-			System.out.println("The email address is: Invalid");
-		}
+	        return true;
+	    }
 	}
-}
+
