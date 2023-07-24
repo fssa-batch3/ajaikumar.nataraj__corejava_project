@@ -24,9 +24,4 @@ public class Task {
         tasks.add(new Task("FacePrep ", 3));
         System.out.println(tasks);
 	}
-
-	public Object getName() {
-		// TODO Auto-generated method stub
-		return null;
-	}
 }

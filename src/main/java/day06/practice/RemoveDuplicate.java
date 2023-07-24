@@ -11,16 +11,17 @@ public class RemoveDuplicate {
 		// TODO Auto-generated method stub
 		List<String> cityList = new ArrayList<String>();
 		cityList.add("Chennai");
+		cityList.add("Mumbai");
 		cityList.add("Bangalore");
 		cityList.add("Mumbai");
-		cityList.add("Mumbai");
+		
 		
 		System.out.println(cityList);
 		
 	    Set<String> set = new LinkedHashSet<>();
 	    set.addAll(cityList);
 
-	    // delete al elements of arraylist
+	    // delete all elements of arraylist
 	    cityList.clear();
 
 	    // add element from set to arraylist

@@ -29,12 +29,8 @@ class Task implements Comparable<Task> {
 		return this.deadline.compareTo(task.getDeadLine());
 
 	}
-	
-	
 }
-
 public class DeadlineSorting {
-
 	public static void main(String[] args) {
 		ArrayList<Task> arr = new ArrayList<Task>();
 		{
@@ -44,13 +40,9 @@ public class DeadlineSorting {
 			arr.add(new Task(5, "Product Design", LocalDate.of(2022, 10, 01)));
 			arr.add(new Task(1, "Software Design", LocalDate.of(2022, 10, 07)));
 			arr.add(new Task(3, "Coding", LocalDate.of(2022, 10, 22)));
-			
-
 			System.out.println(arr);
-			
 			Collections.sort(arr);
 			System.out.println(arr);
 		}
 	}
-
 }

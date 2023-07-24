@@ -13,12 +13,8 @@ public class HashMapDemo {
 
 		// Iterate
 		for (String deptName : deptMap.keySet()) {
-
 			Integer count = deptMap.get(deptName);
 			System.out.println("Department Name:" + deptName + " and Employee Count :" + count);
-
 		}
-
 	}
-
 }

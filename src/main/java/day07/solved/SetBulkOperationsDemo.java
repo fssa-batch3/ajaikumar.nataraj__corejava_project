@@ -18,7 +18,6 @@ public class SetBulkOperationsDemo {
 		s2.add(3);
 		s2.add(4);
 		
-		
 		Set<Integer> union = new HashSet<Integer>(s1);
 		union.addAll(s2);
 		System.out.println(union);
@@ -34,6 +33,5 @@ public class SetBulkOperationsDemo {
 		Set<Integer> difference = new HashSet<Integer>(s1);
 		difference.removeAll(s2);
 		System.out.println(difference);
-
 	}
 }

@@ -61,7 +61,7 @@ public class ComparatorDemo {
 			Student st = itr2.next();
 			System.out.println(st.rollno + " " + st.name + " " + st.age);
 		}
-
+		System.out.println();
 		System.out.println("Sorting by Name");
 
 		Collections.sort(al, new NameComparator());
@@ -70,6 +70,5 @@ public class ComparatorDemo {
 			Student st = itr.next();
 			System.out.println(st.rollno + " " + st.name + " " + st.age);
 		}
-
 	}
 }

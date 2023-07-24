@@ -11,6 +11,15 @@ public class ArrayListDemo {
 		cityList.add("Chennai");
 		cityList.add("Bangalore");
 		cityList.add("Mumbai");
+		cityList.add("Kolkata");
+		cityList.add("Delhi");
+		cityList.add("Hyderabad");
+		cityList.add("Lucknow");
+		cityList.add("Rajasthan");
+		
+		
+		
+		System.out.println(cityList.set(3, "Gujarat"));
 
 		// Display the city names
 		for (Object object : cityList) {

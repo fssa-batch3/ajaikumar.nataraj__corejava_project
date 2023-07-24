@@ -20,7 +20,5 @@ public class IntegerSorting {
 		Collections.sort(integer);
 		
 		System.out.println(integer);
-		
-		
-	}
+			}
 }

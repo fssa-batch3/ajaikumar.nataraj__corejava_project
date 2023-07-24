@@ -4,10 +4,6 @@ import java.util.Iterator;
 import java.util.Set;
 import java.util.HashSet;
 
-/**
- * @author Vinit Gore
- *
- **/
 public class LoopingOverSet {
 
 	public static void main(String[] args) {
@@ -18,7 +14,7 @@ public class LoopingOverSet {
 		cityNames.add("Chennai");
 		cityNames.add("Bangalore");
 		
-		// Method 1: Using foreach
+		// Method 1: Using for each
 		System.out.println("Using foreach:");
 		for (String cityName : cityNames) {
 			System.out.println(cityName);

@@ -7,14 +7,14 @@ import java.util.Map;
 
 public class EmployeesList {
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		HashMap<String, List<String>> departmentMap = new HashMap<>();
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+        HashMap<String, List<String>> departmentMap = new HashMap<>();
 
         // Sample input data
         String[] input = {
-            "HR,Ram",          
             "IT,Basker",
+            "HR,Ram",          
             "HR,Suresh",
             "IT,Joseph",
             "Admin,Sundar"
@@ -31,14 +31,14 @@ public class EmployeesList {
             departmentMap.put(department, employees);
         }
 
-        // Generate output
-        for (Map.Entry<String, List<String>> entry : departmentMap.entrySet()) {
-            String department = entry.getKey();
-            List<String> employees = entry.getValue();
+        // Generate output using keySet()
+        for (String department : departmentMap.keySet()) {
+            List<String> employees = departmentMap.get(department);
 
             String employeeList = String.join(", ", employees);
             System.out.println(department + ": " + employeeList);
         }
-	}
-
+    }
 }
+
+
