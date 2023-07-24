@@ -40,7 +40,7 @@ public class ConnectionUtil {
         }
         catch(SQLException e){
              e.printStackTrace();
-						 // No need re throw the exception.
+		// No need re throw the exception.
         }
     }
 }
