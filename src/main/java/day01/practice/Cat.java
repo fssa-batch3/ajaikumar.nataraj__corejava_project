@@ -42,7 +42,7 @@ public class Cat {
         Cat cat2 = new Cat();
         cat2.setColor("Black");
         cat2.setage(3);
-//        cat2.setSpeaks("Meow!");
+        // cat2.setSpeaks("Meow!");
 
         // Print the attributes of each Dog
         System.out.println("Cat 1:");

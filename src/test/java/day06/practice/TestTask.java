@@ -19,7 +19,6 @@ public class TestTask {
         tasks.add(task2);
         tasks.add(task3);
 
-        // When
         String expectedOutput = "Task Name : learn Core Java Priority : 3\n"
                 + "Task Name : Lunch Priority : 1\n"
                 + "Task Name : FacePrep Priority : 3\n";
@@ -29,7 +28,6 @@ public class TestTask {
             actualOutput.append(task.toString());
         }
 
-        // Then
         Assertions.assertEquals(expectedOutput, actualOutput.toString());
     }
 }

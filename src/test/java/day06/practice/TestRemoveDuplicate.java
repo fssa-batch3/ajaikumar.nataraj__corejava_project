@@ -16,26 +16,27 @@ public class TestRemoveDuplicate {
 		        cityList.add("Mumbai");
 		        cityList.add("Bangalore");
 		        cityList.add("Kolkata");
-		        // When
+
 		        Set<String> set = new LinkedHashSet<>();
 		        set.addAll(cityList);
 		        cityList.clear();
 		        cityList.addAll(set);
-		        // Then
+		        // False
 		        List<String> expectedCityListFalse = new ArrayList<>();
 		        expectedCityListFalse.add("Chennai");
 		        expectedCityListFalse.add("Mumbai");
 		        expectedCityListFalse.add("Bangalore");
-		        
+		        // True
 		        List<String> expectedCityListTrue = new ArrayList<>();
 		        expectedCityListTrue.add("Chennai");
 		        expectedCityListTrue.add("Mumbai");
 		        expectedCityListTrue.add("Bangalore");
 		        expectedCityListTrue.add("Kolkata");
 		        
-		       
-		        Assertions.assertEquals(expectedCityListFalse, cityList);
-		      //  Assertions.assertEquals(expectedCityListTrue, cityList);
+		       // for false
+		       // Assertions.assertEquals(expectedCityListFalse, cityList);
+		        // for true
+		       Assertions.assertEquals(expectedCityListTrue, cityList);
 		    }
 	}
 
