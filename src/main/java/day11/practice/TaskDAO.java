@@ -11,7 +11,7 @@ public class TaskDAO {
 
     public void createTask(Task task) throws DAOException, SQLException {
         // Step 01: Get connection
-        Connection connection = DriverManager.getConnection("jdbc:mysql://localhost/project", "root", "root");
+        Connection connection = DriverManager.getConnection("jdbc:mysql://localhost/project", "root", "123456");
         System.out.println(connection);
 
         // Step 02: Create a Statement

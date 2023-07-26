@@ -1,30 +1,21 @@
 package day10.practice;
 
-import static org.junit.jupiter.api.Assertions.assertTrue;
-
-import java.util.Scanner;
+import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
-public class EmailValidatorTest {
-
+ class TestEmailValidator {
+	
 	@Test
-	public void checkEmail() {
-		Scanner scan = new Scanner(System.in);
-		System.out.print("Enter an email address: ");
-		String email = scan.nextLine();
-		System.out.println("Your given email id is " + email);
-
+	void testEmail() {
+		
+		String email = "ajai@gmail.com";
+		
 		try {
-			boolean isValid = EmailValidator.isValidEmail(email);
-			System.out.println("Is the email valid? " + isValid);
-			assertTrue(isValid);
-		} catch (ValidateEmailException e) {
-			System.out.println("Email is invalid !");
-			System.out.println("Error: " + e.getMessage());
-		} finally {
-			// Close the Scanner after the test is completed.
-			scan.close();
+			assertTrue(new EmailValidator().isValidEmail(email));
+		} catch (InvalidEmailException e) {
+			e.printStackTrace();
 		}
 	}
+
 }
