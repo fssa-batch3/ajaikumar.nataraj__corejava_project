@@ -25,8 +25,7 @@ class TaskDAO {
 
 	public void createTask(Task task) throws DAOException {
 		try (Connection connection = DriverManager.getConnection(DB_URL, DB_USERNAME, DB_PASSWORD)) {
-			PreparedStatement Statement = connection
-					.prepareStatement("INSERT INTO task (id, name, status) VALUES (?, ?, ?)");
+			PreparedStatement Statement = connection.prepareStatement("INSERT INTO task (id, name, status) VALUES (?, ?, ?)");
 			Statement.setInt(1, task.id);
 			Statement.setString(2, task.name);
 			Statement.setString(3, task.status);
@@ -35,12 +34,10 @@ class TaskDAO {
 			throw new DAOException("Error creating task: " + e.getMessage(), e);
 		}
 	}
-
+//
 	public void updateTask(Task task) throws DAOException {
 		try (Connection connection = DriverManager.getConnection(DB_URL, DB_USERNAME, DB_PASSWORD)) {
-
-			PreparedStatement statement = connection
-					.prepareStatement("UPDATE task SET name = ?, status = ? WHERE id = ?");
+			PreparedStatement statement = connection.prepareStatement("UPDATE task SET name = ?, status = ? WHERE id = ?");
 			statement.setString(1, task.name);
 			statement.setString(2, task.status);
 			statement.setInt(3, task.id);
@@ -54,7 +51,7 @@ class TaskDAO {
 		try (Connection connection = DriverManager.getConnection(DB_URL, DB_USERNAME, DB_PASSWORD)) {
 
 			PreparedStatement statement = connection.prepareStatement("DELETE FROM task WHERE id = ?");
-			statement.setInt(1, 2);
+			statement.setInt(1, task.id);
 			statement.executeUpdate();
 		} catch (SQLException e) {
 			throw new DAOException("Error deleting task: " + e.getMessage(), e);

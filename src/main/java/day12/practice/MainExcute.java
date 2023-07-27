@@ -11,16 +11,16 @@ public class MainExcute {
 
 		
 		Task newTask = new Task();
-		newTask.id = 14;
-		newTask.name = "Playing in garden";
-		newTask.status = "Pending";
+		newTask.id = 11;
+		newTask.name = "Learn FacePREP";
+		newTask.status = "Waiting for Coach";
 		taskDAO.createTask(newTask);
 
 	
 		Task existingTask = new Task();
 		existingTask.id = 1;
-		existingTask.name = "Going to outing";
-		existingTask.status = "Waiting";
+		existingTask.name = "Learn Java";
+		existingTask.status = "Wait for teaching";
 		taskDAO.updateTask(existingTask);
 
 		
