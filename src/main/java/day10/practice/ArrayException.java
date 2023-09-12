@@ -40,7 +40,7 @@ class UserManager {
 }
 
 public class  ArrayException {
-    public static void main(String[] args) throws Arithmatic {
+    public static void main(String[] args) {
         UserManager userManager = new UserManager();
 
         try {

@@ -11,31 +11,31 @@ public class MainExcute {
 
 		
 		Task newTask = new Task();
-		newTask.id = 11;
+		newTask.id = 18;
 		newTask.name = "Learn FacePREP";
 		newTask.status = "Waiting for Coach";
 		taskDAO.createTask(newTask);
 
 	
-		Task existingTask = new Task();
-		existingTask.id = 1;
-		existingTask.name = "Learn Java";
-		existingTask.status = "Wait for teaching";
-		taskDAO.updateTask(existingTask);
-
-		
-		int taskIdToDelete = 1;
-		taskDAO.deleteTask(taskIdToDelete);
-
-	
-		try {
-			List<Task> allTasks = taskDAO.getAllTasks();
-			for (Task task : allTasks) {
-				System.out.println("ID: " + task.id + ", Name: " + task.name + ", Status: " + task.status);
-			}
-		} catch (DAOException e) {
-			System.err.println(e.getMessage());
-		}
+//		Task existingTask = new Task();
+//		existingTask.id = 1;
+//		existingTask.name = "Learn Java";
+//		existingTask.status = "Wait for teaching";
+//		taskDAO.updateTask(existingTask);
+//
+//		
+//		int taskIdToDelete = 1;
+//		taskDAO.deleteTask(taskIdToDelete);
+//
+//	
+//		try {
+//			List<Task> allTasks = taskDAO.getAllTasks();
+//			for (Task task : allTasks) {
+//				System.out.println("ID: " + task.id + ", Name: " + task.name + ", Status: " + task.status);
+//			}
+//		} catch (DAOException e) {
+//			System.err.println(e.getMessage());
+//		}
 	}
 
 }
